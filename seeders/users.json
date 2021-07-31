@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Kukuh",
+        "age": 25,
+        "gender": "Male",
+        "email":"kukuh@mail.com"
+    },
+    {
+        "id": 2,
+        "name": "Bagas",
+        "age": 25,
+        "gender": "Male",
+        "email":"bagas@mail.com"
+    },
+    {
+        "id": 3,
+        "name": "Indah",
+        "age": 25,
+        "gender": "Female",
+        "email":"indah@mail.com"
+    },    
+    {
+        "id": 4,
+        "name": "Rani",
+        "age": 28,
+        "gender": "Female",
+        "email":"rani@mail.com"
+    },    
+    {
+        "id": 5,
+        "name": "Joko",
+        "age": 20,
+        "gender": "Male",
+        "email":"kukuh@mail.com"
+    }
+]
