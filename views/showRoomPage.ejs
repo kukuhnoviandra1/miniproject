@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Apps</title>
+</head>
+<body>
+    <center><marquee><h1>LIST ROOM</marquee></h1>
+    <hr>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Change Status</th>
+                <th>Details</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <% rooms.forEach(room => { %>
+            <tr>
+                <th><%= room.id %></th>
+                <th><%= room.name %></th>
+                <th><%= room.type %></th>
+                <th><%= room.status %></th>
+                <th>
+                    <a href="/rooms/update/<%= room.id %>">Changes</a>                   
+                </th>
+                <th>
+                    <a href="/books">GO</a>
+                </th>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <br>
+    <div>
+    <form action="/" method="get">
+        <button>Back To Home</button>
+    </form>
+</center>
+</body>

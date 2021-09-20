@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Apps</title>
+</head>
+<body>
+    <h1>Update Data Customers</h1>
+    <br>
+    <form action="/users/update/<%= users.id %>"method="POST">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" value="<%= users.name %>" name="name" placeholder="Name"/>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="text" value="<%= users.age %>" name="age" placeholder="age"/>
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+            <input type="text" value="<%= users.gender %>" name="gender" placeholder="gender"/>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="text" value="<%= users.email %>" name="email" placeholder="Email"/>
+        </div>
+        
+        <input type="submit" onclick="alert('Has been updated')" value="Submit"/>
+
+    </form>
+</body>
+</html>

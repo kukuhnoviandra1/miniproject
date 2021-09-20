@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Apps</title>
+</head>
+<body>
+    <center><h1>Customer List</h1>
+    <hr>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Update or Delete Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(user => { %>
+            <tr>
+                <th><%= user.id %></th>
+                <th><%= user.name %></th>
+                <th><%= user.age %></th>
+                <th><%= user.gender %></th>
+                <th><%= user.email %></th>
+                <th>
+                    <a href="/users/update/<%= user.id %>">Update Profile</a>
+                    <a href="/users/delete/<%= user.id %>">Delete Profile</a>
+                </th>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <br>
+    <form action="/" method="get">
+        <button>Back To Home</button>
+    </form>
+</center>
+</body>
+</html>

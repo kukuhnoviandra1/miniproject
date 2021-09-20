@@ -1,9 +1,10 @@
 const router = require('express').Router()
 
 router.get('/',(req, res) =>{
-    res.status(200).json({
-        message : "WELCOME TO MYZ HOTEL"
-    })
+    res.render('index.ejs')
+    // ({
+    //     message : "WELCOME TO MYZ HOTEL"
+    // })
 })
 
 const UserRoutes = require('./user')

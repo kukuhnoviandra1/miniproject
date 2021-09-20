@@ -19,13 +19,34 @@ module.exports = (sequelize, DataTypes) => {
       type : DataTypes.STRING,
       validate : {
         notEmpty : {
-          message : "Form Tidak Boleh Kosong !!"
+          message : "Form Nama Tidak Boleh Kosong !!"
         }
       }
     },
-    age: DataTypes.INTEGER,
-    gender: DataTypes.STRING,
-    email: DataTypes.STRING
+    age: {
+      type : DataTypes.STRING,
+      validate : {
+        notEmpty : {
+          message : "Form Age Boleh Kosong !!"
+        }
+      }
+    },
+    gender: {
+      type : DataTypes.STRING,
+      validate : {
+        notEmpty : {
+          message : "Form Gender Boleh Kosong !!"
+        }
+      }
+    },
+    email: {
+      type : DataTypes.STRING,
+      validate : {
+        notEmpty : {
+          message : "Form Email Boleh Kosong !!"
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'User',

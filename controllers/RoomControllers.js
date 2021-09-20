@@ -1,4 +1,4 @@
-const { Room } = require('../models')
+const { Room, Book } = require('../models')
 
 class RoomController{
     static async showRooms(req, res){
@@ -8,8 +8,7 @@ class RoomController{
                     ['id','ASC']
                 ]
             })
-
-            res.status(200).json(rooms)
+            res.render('./showRoomPage.ejs',{rooms})
         }catch(err){
             res.status(500).json(err)
         }
@@ -41,6 +40,23 @@ class RoomController{
             res.status(500).json(err)
         }
 
+    }
+    static async update(req,res){
+        try{
+            let id =  +req.params.id
+            let result = await Room.update({
+            status: 'Available'
+            },{
+                where : {id}
+            })
+            let tempBook = await Book.destroy({
+                where : {RoomId:id}
+            })
+            res.redirect('/rooms')
+
+        }catch(err){
+            res.status(500).json(err)
+        }
     }
 
 }
